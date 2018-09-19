@@ -1,0 +1,3 @@
+apps: []
+# - name: kubernetes-dashboard
+#   minAvailable: 0

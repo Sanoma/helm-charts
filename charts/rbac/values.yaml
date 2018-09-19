@@ -1,0 +1,6 @@
+dashboardPermissions:
+  create: true
+  clusterRoles:
+    - view
+    - secret-lister
+    - cluster-object-viewer
