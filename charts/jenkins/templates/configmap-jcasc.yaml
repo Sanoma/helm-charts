@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "jenkins.fullname" . }}-jcasc
+  labels:
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    namspace: {{ .Release.Namespace }}
+data:
+  jenkins.yaml: |
+{{ toYaml .Values.configuration | indent 4 }}
+
+    jobs:
+{{ range .Values.jobGenerator }}
+{{ if eq .type "monorepo" }}
+    - script: |
+        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson .properties }}')
+{{ $.Files.Get "jobdsl/monorepo.groovy" | indent 8 }}
+{{ end }}
+{{ if eq .type "simple" }}
+    - script: |
+        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson .properties }}')
+{{ $.Files.Get "jobdsl/simple.groovy" | indent 8 }}
+{{ end }}
+{{ end }}

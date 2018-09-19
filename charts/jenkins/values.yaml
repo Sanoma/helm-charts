@@ -1,0 +1,78 @@
+image: jenkins/jenkins
+imageTag: 2.141-slim
+imagePullPolicy: Always
+javaOpts: ""
+
+masterTolerations: []
+masterNodeSelector: {}
+podAnnotations: {}
+resources: []
+
+persistence:
+  jobData:
+    size: 20Gi
+    annotations: {}
+    existingClaim: ""
+  userData:
+    size: 1Gi
+    annotations: {}
+    existingClaim: ""
+
+headerMessage: ""
+headerColor: red # blue
+
+jobGenerator: []
+# - type: monorepo
+#   properties:
+#     branchFilterExcludes: ""
+#     branchFilterIncludes: ""
+#     bitbucketRepo:
+#       serverUrl: ""
+#       repoOwner: ""
+#       repository: ""
+#       credentialsId: ""
+#     gitRepo:
+#       url: ""
+#       credentialsId: ""
+#     jobPaths: []
+# - type: simple
+#   properties:
+#     branchFilterExcludes: ""
+#     branchFilterIncludes: ""
+#     bitbucketRepo:
+#       serverUrl: ""
+#       repoOwner: ""
+#       repository: ""
+#       credentialsId: ""
+
+# Used by "configuration-as-code" plugin
+configuration:
+  jenkins:
+    systemMessage: "Configured via configuration-as-code plugin!"
+
+# This secret will be used by configuration-as-code plugin for interpolating
+# ${} values inside "configuration" above
+secrets:
+  name: jenkins-secrets
+
+ingress:
+  enabled: false
+  # # Annotations to be added to the ingress
+  # #
+  # annotations:
+  #   kubernetes.io/ingress.class: nginx
+  #   kubernetes.io/tls-acme: "true"
+  #
+  # # Hostnames
+  # # Must be provided if Ingress is enabled
+  # #
+  # hosts:
+  #   - jenkins.domain.com
+  #
+  # # TLS configuration
+  # # Secrets must be manually created in the namespace
+  # #
+  # tls:
+  #   - secretName: argo-ui-tls
+  #     hosts:
+  #       - jenkins.domain.com

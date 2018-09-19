@@ -1,0 +1,32 @@
+{{ range .Values.pvcList }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .name }}
+spec:
+  storageClassName: ""
+  awsElasticBlockStore:
+    volumeID: aws://{{ .awsRegion | default "eu-west-1" }}/{{ .ebsVolumeID }}
+    fsType: ext4
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: {{ .size }}
+  persistentVolumeReclaimPolicy: Delete
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .name }}
+  annotations:
+{{ toYaml .annotations | indent 4 }}
+spec:
+  storageClassName: ""
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .size }}
+  volumeName: {{ .name }}
+{{ end }}

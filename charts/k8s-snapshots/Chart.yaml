@@ -1,0 +1,10 @@
+name: k8s-snapshots
+version: 0.1.0
+appVersion: v2.0
+description: Chart for k8s-snapshots for schedules volume snapshots
+keywords:
+- volume
+- snapshot
+maintainers:
+- name: Ilya Sotkov
+  email: ilya.sotkov@sanoma.com

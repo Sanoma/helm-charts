@@ -1,0 +1,78 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "jenkins.fullname" . }}-css
+  labels:
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    namspace: {{ .Release.Namespace }}
+data:
+  extra.css: |
+    @import url('https://fonts.googleapis.com/css?family=Cousine');
+
+    body {
+      background-color: #fbfbfb;
+    }
+
+    body, table, form, input, td, th, p, textarea, select {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    }
+
+    a:visited {
+      text-decoration: underline;
+      color: #204A87;
+    }
+
+    pre, xmp, plaintext, listing {
+      font-family: Cousine,monospace;
+    }
+
+    .logo::after {
+      content: '{{ .Values.headerMessage }}';
+      font-weight: bold;
+      font-size: 18px;
+      position: relative;
+      right: -300px;
+      height: 40px;
+      top: 0px;
+      padding-top: 12px;
+      display: block;
+      color: white;
+    }
+
+    #main-panel > pre {
+      border-radius: 3px;
+    }
+
+    #shutdown-msg {
+      margin-left: 0;
+      margin-right: 0;
+      border-radius: 3px;
+    }
+
+    .console-output {
+      padding: 1em;
+      background-color: #242630;
+      color: #f1f1f1;
+    }
+
+    #header {
+      {{ if eq .Values.headerColor "red" }}
+      background-image: linear-gradient(to right, #ff9800 0%, #f83600 100%);
+      {{ else }}
+      background-image: linear-gradient(to right, #09203f 0%, #537895 100%)
+      {{ end }}
+    }
+
+    .console-output a:link {
+      color: #8888ff;
+    }
+
+    .console-output a:hover {
+      text-decoration: none;
+    }
+
+    .console-output a:visited {
+      color: #8888ff;
+    }

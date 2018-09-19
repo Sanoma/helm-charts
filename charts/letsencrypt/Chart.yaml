@@ -1,0 +1,7 @@
+apiVersion: v1
+description: Let's Encrypt ClusterIssuer and Certificates
+name: letsencrypt
+version: 0.2.0
+maintainers:
+- name: Ilya Sotkov
+  email: ilya.sotkov@sanoma.com

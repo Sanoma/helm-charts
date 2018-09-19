@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "jenkins.fullname" . }}
+  labels:
+    app: {{ template "jenkins.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: {{ template "jenkins.fullname" . }}
+  template:
+    metadata:
+      annotations:
+{{ toYaml .Values.podAnnotations | indent 8 }}
+      labels:
+        app: {{ template "jenkins.fullname" . }}
+        chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+        release: {{ .Release.Name }}
+        heritage: {{ .Release.Service }}
+    spec:
+    {{- with .Values.masterNodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      tolerations:
+{{ toYaml .Values.masterTolerations | indent 8 }}
+      serviceAccountName: {{ template "jenkins.fullname" . }}
+      containers:
+      - name: jenkins
+        image: {{ .Values.image }}:{{ .Values.imageTag }}
+        imagePullPolicy: {{ .Values.imagePullPolicy }}
+        ports:
+        - name: http
+          containerPort: 8080
+        - name: slavelistener
+          containerPort: 50000
+        env:
+        - name: JAVA_TOOL_OPTIONS
+          value: "{{ .Values.javaOpts }}"
+        - name: CASC_JENKINS_CONFIG
+          value: /var/jenkins_home/casc_configs/..data/jenkins.yaml
+        - name: SECRETS
+          value: /secrets/jenkins
+        volumeMounts:
+        - name: jenkins-configuration-as-code
+          mountPath: /var/jenkins_home/casc_configs
+        - name: jenkins-secrets
+          mountPath: /secrets/jenkins
+          readOnly: true
+        - name: jenkins-css
+          mountPath: /var/jenkins_home/userContent/css
+          readOnly: true
+        - name: {{ template "jenkins.fullname" . }}-job-data
+          mountPath: /var/jenkins_home/jobs
+        - name: {{ template "jenkins.fullname" . }}-user-data
+          mountPath: /var/jenkins_home/users
+        resources:
+{{ toYaml .Values.resources | indent 10 }}
+        livenessProbe:
+          httpGet:
+            path: /login
+            port: 8080
+          initialDelaySeconds: 60
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /login
+            port: 8080
+          initialDelaySeconds: 60
+          timeoutSeconds: 5
+      volumes:
+      - name: jenkins-configuration-as-code
+        configMap:
+          name: {{ template "jenkins.fullname" . }}-jcasc
+      - name: jenkins-secrets
+        secret:
+          secretName: {{ .Values.secrets.name }}
+      - name: jenkins-css
+        configMap:
+          name: {{ template "jenkins.fullname" . }}-css
+      - name: {{ template "jenkins.fullname" . }}-job-data
+        persistentVolumeClaim:
+          {{ if not .Values.persistence.jobData.existingClaim }}
+          claimName: {{ template "jenkins.fullname" . }}-job-data
+          {{ else }}
+          claimName: {{ .Values.persistence.jobData.existingClaim }}
+          {{ end }}
+      - name: {{ template "jenkins.fullname" . }}-user-data
+        persistentVolumeClaim:
+          {{ if not .Values.persistence.userData.existingClaim }}
+          claimName: {{ template "jenkins.fullname" . }}-user-data
+          {{ else }}
+          claimName: {{ .Values.persistence.userData.existingClaim }}
+          {{ end }}

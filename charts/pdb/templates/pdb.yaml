@@ -1,0 +1,19 @@
+{{- range .Values.apps }}
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ .name }}
+  labels:
+    app: pdb
+    chart: "{{ $.Chart.Name }}-{{ $.Chart.Version }}"
+    release: "{{ $.Release.Name }}"
+    heritage: "{{ $.Release.Service }}"
+spec:
+  minAvailable: {{ .minAvailable }}
+  {{- if .maxUnavailable }}
+  maxUnavailable: {{ .maxUnavailable }}
+  {{- end }}
+  selector:
+    matchLabels:
+      app: {{ .name }}
+{{- end }}

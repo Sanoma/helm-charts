@@ -1,0 +1,6 @@
+pvcList: []
+# - name: jenkins-pr-user-data
+#   size: 1Gi
+#   ebsVolumeID: vol-0a2f65ebe774a25db
+#   awsRegion: eu-west-1
+#   annotations: {}

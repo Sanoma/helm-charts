@@ -1,0 +1,31 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-stg
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: {{ .Values.accountEmail | quote }}
+    privateKeySecretRef:
+      name: letsencrypt-stg-private-key
+    dns01:
+      providers:
+      - name: route53
+        route53:
+          region: eu-west-1
+---
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: {{ .Values.accountEmail | quote }}
+    privateKeySecretRef:
+      name: letsencrypt-private-key
+    dns01:
+      providers:
+      - name: route53
+        route53:
+          region: eu-west-1

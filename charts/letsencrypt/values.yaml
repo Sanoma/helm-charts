@@ -1,0 +1,3 @@
+domainZone: ""
+accountEmail: letsencrypt@example.com
+staging: true

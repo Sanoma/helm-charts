@@ -1,0 +1,10 @@
+name: aws-iam-authenticator
+version: 0.1.0
+appVersion: 0.3.0
+description: Chart for aws-iam-authenticator
+keywords:
+- aws-iam-authenticator
+- heptio-authenticator-aws
+maintainers:
+- name: Ilya Sotkov
+  email: ilya.sotkov@sanoma.com
