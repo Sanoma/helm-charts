@@ -4,6 +4,9 @@ jobs:
     docker:
       - image: alpine
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f6:69:27:74:8a:e1:45:99:5d:31:df:9a:5f:3e:75:ba"
       - checkout
       - run:
           name: helm-github-pages
