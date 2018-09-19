@@ -1,0 +1,127 @@
+apiVersion: v1
+entries:
+  aws-iam-authenticator:
+  - appVersion: 0.3.0
+    created: 2018-09-19T08:10:37.48972764Z
+    description: Chart for aws-iam-authenticator
+    digest: bb19e3273aaf6c4756bbffa19a743caca2e126e5f3493354229130c534fc04d2
+    keywords:
+    - aws-iam-authenticator
+    - heptio-authenticator-aws
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: aws-iam-authenticator
+    urls:
+    - aws-iam-authenticator/aws-iam-authenticator-0.1.0.tgz
+    version: 0.1.0
+  jenkins:
+  - appVersion: "2.141"
+    created: 2018-09-19T08:10:37.490671822Z
+    description: Jenkins chart that uses configuration-as-code plugin
+    digest: 26c8459680c5f12e86bb161fa1924f5944839125cf2d14326f46c5350949a91b
+    keywords:
+    - continuous-delivery
+    - continuous-deployment
+    - continuous-integration
+    - jenkins
+    - configuration-as-code
+    - casc
+    - jcasc
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: jenkins
+    urls:
+    - jenkins/jenkins-0.4.0.tgz
+    version: 0.4.0
+  k8s-snapshots:
+  - appVersion: v2.0
+    created: 2018-09-19T08:10:37.491180762Z
+    description: Chart for k8s-snapshots for schedules volume snapshots
+    digest: e12dcb4eac0b434c0b281047e8daf9f03c589b1aa338de0c751464f504164f18
+    keywords:
+    - volume
+    - snapshot
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: k8s-snapshots
+    urls:
+    - k8s-snapshots/k8s-snapshots-0.1.0.tgz
+    version: 0.1.0
+  letsencrypt:
+  - apiVersion: v1
+    created: 2018-09-19T08:10:37.491590154Z
+    description: Let's Encrypt ClusterIssuer and Certificates
+    digest: d3a78cd9f52b1dbd74c5735281b9463d59a37a8f8812afa393023abc21b2b365
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: letsencrypt
+    urls:
+    - letsencrypt/letsencrypt-0.2.0.tgz
+    version: 0.2.0
+  pdb:
+  - apiVersion: v1
+    created: 2018-09-19T08:10:37.491954764Z
+    description: A chart for creating PodDisruptionBudgets
+    digest: 18e2116c192df7d3bf762a01b10caa8af3b38fe3cfdf45810687a1e066956772
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: pdb
+    urls:
+    - pdb/pdb-0.1.0.tgz
+    version: 0.1.0
+  pvc-recovery:
+  - apiVersion: v1
+    created: 2018-09-19T08:10:37.492364168Z
+    description: A chart for creating PVC from EBS volumes
+    digest: e910c6613d482bc8e47c1a9402ff9714e052ba20252e64f6679f064aac99f159
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: pvc-recovery
+    urls:
+    - pvc-recovery/pvc-recovery-0.1.0.tgz
+    version: 0.1.0
+  rbac:
+  - apiVersion: v1
+    created: 2018-09-19T08:10:37.492922423Z
+    description: A Helm chart for Kubernetes
+    digest: 71a762d208af56d8a81f0de1688d87f2d6e7d21672812ef824474de24649c1a7
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: rbac
+    urls:
+    - rbac/rbac-0.1.0.tgz
+    version: 0.1.0
+  sonatype-nexus:
+  - appVersion: 3.12.1-01
+    created: 2018-09-19T08:10:37.49418886Z
+    description: Sonatype Nexus is an open source repository manager
+    digest: 40149998619a2365188c3d31771e9b4af216d175b476b32250e1ac0fd66f06ea
+    home: https://www.sonatype.com/nexus-repository-oss
+    icon: http://www.sonatype.org/nexus/content/uploads/2015/06/Nexus-Logo.jpg
+    keywords:
+    - artifacts
+    - dependency
+    - management
+    - sonatype
+    - nexus
+    - repository
+    maintainers:
+    - email: rjkernick@gmail.com
+      name: rjkernick
+    name: sonatype-nexus
+    sources:
+    - https://github.com/sonatype/nexus-public
+    - https://github.com/travelaudience/docker-nexus
+    - https://github.com/travelaudience/kubernetes-nexus
+    - https://github.com/travelaudience/docker-nexus-backup
+    urls:
+    - sonatype-nexus/sonatype-nexus-1.7.0.tgz
+    version: 1.7.0
+generated: 2018-09-19T08:10:37.488931521Z
