@@ -1,5 +1,5 @@
 // Create a jenkins job for a simple repo with one Jenkinsfile in repo root
-multibranchPipelineJob('main-job') {
+multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
     branchSources {
         branchSource {
             source {
