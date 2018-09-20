@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   aws-iam-authenticator:
   - appVersion: 0.3.0
-    created: 2018-09-20T09:04:01.815775544Z
+    created: 2018-09-20T09:07:20.023085695Z
     description: Chart for aws-iam-authenticator
     digest: bb19e3273aaf6c4756bbffa19a743caca2e126e5f3493354229130c534fc04d2
     keywords:
@@ -17,7 +17,7 @@ entries:
     version: 0.1.0
   jenkins:
   - appVersion: "2.141"
-    created: 2018-09-20T09:04:01.817755379Z
+    created: 2018-09-20T09:07:20.024816223Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: a7ce01ce7a64ea404eea94dd77d1531d6ef6d5aa45668c8b9730e9fc5548fbdb
     keywords:
@@ -36,7 +36,7 @@ entries:
     - jenkins/jenkins-0.4.1.tgz
     version: 0.4.1
   - appVersion: "2.141"
-    created: 2018-09-20T09:04:01.816751784Z
+    created: 2018-09-20T09:07:20.023993062Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: bb1b214381296eebc9a734dc5bd95d6c71d1a9540c954a4be9d32193558b8e3b
     keywords:
@@ -56,7 +56,7 @@ entries:
     version: 0.4.0
   k8s-snapshots:
   - appVersion: v2.0
-    created: 2018-09-20T09:04:01.818245667Z
+    created: 2018-09-20T09:07:20.025330855Z
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: e12dcb4eac0b434c0b281047e8daf9f03c589b1aa338de0c751464f504164f18
     keywords:
@@ -71,7 +71,7 @@ entries:
     version: 0.1.0
   letsencrypt:
   - apiVersion: v1
-    created: 2018-09-20T09:04:01.818654316Z
+    created: 2018-09-20T09:07:20.025692613Z
     description: Let's Encrypt ClusterIssuer and Certificates
     digest: d3a78cd9f52b1dbd74c5735281b9463d59a37a8f8812afa393023abc21b2b365
     maintainers:
@@ -83,7 +83,7 @@ entries:
     version: 0.2.0
   pdb:
   - apiVersion: v1
-    created: 2018-09-20T09:04:01.819021441Z
+    created: 2018-09-20T09:07:20.026088537Z
     description: A chart for creating PodDisruptionBudgets
     digest: 18e2116c192df7d3bf762a01b10caa8af3b38fe3cfdf45810687a1e066956772
     maintainers:
@@ -95,7 +95,7 @@ entries:
     version: 0.1.0
   pvc-recovery:
   - apiVersion: v1
-    created: 2018-09-20T09:04:01.819415761Z
+    created: 2018-09-20T09:07:20.026444845Z
     description: A chart for creating PVC from EBS volumes
     digest: e910c6613d482bc8e47c1a9402ff9714e052ba20252e64f6679f064aac99f159
     maintainers:
@@ -107,7 +107,7 @@ entries:
     version: 0.1.0
   rbac:
   - apiVersion: v1
-    created: 2018-09-20T09:04:01.819930225Z
+    created: 2018-09-20T09:07:20.026849262Z
     description: A Helm chart for Kubernetes
     digest: 71a762d208af56d8a81f0de1688d87f2d6e7d21672812ef824474de24649c1a7
     maintainers:
@@ -119,7 +119,7 @@ entries:
     version: 0.1.0
   sonatype-nexus:
   - appVersion: 3.12.1-01
-    created: 2018-09-20T09:04:01.821152637Z
+    created: 2018-09-20T09:07:20.028025871Z
     description: Sonatype Nexus is an open source repository manager
     digest: 40149998619a2365188c3d31771e9b4af216d175b476b32250e1ac0fd66f06ea
     home: https://www.sonatype.com/nexus-repository-oss
@@ -143,4 +143,4 @@ entries:
     urls:
     - sonatype-nexus/sonatype-nexus-1.7.0.tgz
     version: 1.7.0
-generated: 2018-09-20T09:04:01.814846584Z
+generated: 2018-09-20T09:07:20.022305072Z
