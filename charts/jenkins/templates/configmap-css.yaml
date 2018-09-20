@@ -59,7 +59,7 @@ data:
 
     #header {
       {{ if eq .Values.headerColor "red" }}
-      background-image: linear-gradient(to right, #ff9800 0%, #f83600 100%);
+      background-image: linear-gradient(to right, #f83600 0%, #ff9800 100%);
       {{ else }}
       background-image: linear-gradient(to right, #09203f 0%, #537895 100%)
       {{ end }}
