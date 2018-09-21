@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   aws-iam-authenticator:
   - appVersion: 0.3.0
-    created: 2018-09-21T14:55:31.39418698Z
+    created: 2018-09-21T17:24:23.374109209Z
     description: Chart for aws-iam-authenticator
     digest: bb19e3273aaf6c4756bbffa19a743caca2e126e5f3493354229130c534fc04d2
     keywords:
@@ -17,7 +17,26 @@ entries:
     version: 0.1.0
   jenkins:
   - appVersion: "2.141"
-    created: 2018-09-21T14:55:31.396285155Z
+    created: 2018-09-21T17:24:23.376973696Z
+    description: Jenkins chart that uses configuration-as-code plugin
+    digest: 350ead8fa5b022db33980268f43406367d6d2a8bc9e014a34ceceb5b369a3038
+    keywords:
+    - continuous-delivery
+    - continuous-deployment
+    - continuous-integration
+    - jenkins
+    - configuration-as-code
+    - casc
+    - jcasc
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: jenkins
+    urls:
+    - jenkins/jenkins-0.4.3-SNAPSHOT.tgz
+    version: 0.4.3-SNAPSHOT
+  - appVersion: "2.141"
+    created: 2018-09-21T17:24:23.376373909Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 96723e43d1c95cfdd1344931fb1cd9598130492256e872b8a067e9ed1563be1c
     keywords:
@@ -36,7 +55,7 @@ entries:
     - jenkins/jenkins-0.4.2.tgz
     version: 0.4.2
   - appVersion: "2.141"
-    created: 2018-09-21T14:55:31.395584201Z
+    created: 2018-09-21T17:24:23.375683384Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: a7ce01ce7a64ea404eea94dd77d1531d6ef6d5aa45668c8b9730e9fc5548fbdb
     keywords:
@@ -55,7 +74,7 @@ entries:
     - jenkins/jenkins-0.4.1.tgz
     version: 0.4.1
   - appVersion: "2.141"
-    created: 2018-09-21T14:55:31.394897999Z
+    created: 2018-09-21T17:24:23.374934909Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: bb1b214381296eebc9a734dc5bd95d6c71d1a9540c954a4be9d32193558b8e3b
     keywords:
@@ -75,7 +94,7 @@ entries:
     version: 0.4.0
   k8s-snapshots:
   - appVersion: v2.0
-    created: 2018-09-21T14:55:31.3966421Z
+    created: 2018-09-21T17:24:23.377307762Z
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: e12dcb4eac0b434c0b281047e8daf9f03c589b1aa338de0c751464f504164f18
     keywords:
@@ -90,7 +109,7 @@ entries:
     version: 0.1.0
   letsencrypt:
   - apiVersion: v1
-    created: 2018-09-21T14:55:31.396959639Z
+    created: 2018-09-21T17:24:23.377632138Z
     description: Let's Encrypt ClusterIssuer and Certificates
     digest: d3a78cd9f52b1dbd74c5735281b9463d59a37a8f8812afa393023abc21b2b365
     maintainers:
@@ -102,7 +121,7 @@ entries:
     version: 0.2.0
   pdb:
   - apiVersion: v1
-    created: 2018-09-21T14:55:31.397244143Z
+    created: 2018-09-21T17:24:23.37787564Z
     description: A chart for creating PodDisruptionBudgets
     digest: 18e2116c192df7d3bf762a01b10caa8af3b38fe3cfdf45810687a1e066956772
     maintainers:
@@ -114,7 +133,7 @@ entries:
     version: 0.1.0
   pvc-recovery:
   - apiVersion: v1
-    created: 2018-09-21T14:55:31.397540767Z
+    created: 2018-09-21T17:24:23.378178963Z
     description: A chart for creating PVC from EBS volumes
     digest: e910c6613d482bc8e47c1a9402ff9714e052ba20252e64f6679f064aac99f159
     maintainers:
@@ -126,7 +145,7 @@ entries:
     version: 0.1.0
   rbac:
   - apiVersion: v1
-    created: 2018-09-21T14:55:31.397867386Z
+    created: 2018-09-21T17:24:23.378481471Z
     description: A Helm chart for Kubernetes
     digest: 71a762d208af56d8a81f0de1688d87f2d6e7d21672812ef824474de24649c1a7
     maintainers:
@@ -138,7 +157,7 @@ entries:
     version: 0.1.0
   sonatype-nexus:
   - appVersion: 3.12.1-01
-    created: 2018-09-21T14:55:31.398833866Z
+    created: 2018-09-21T17:24:23.379372695Z
     description: Sonatype Nexus is an open source repository manager
     digest: 40149998619a2365188c3d31771e9b4af216d175b476b32250e1ac0fd66f06ea
     home: https://www.sonatype.com/nexus-repository-oss
@@ -162,4 +181,4 @@ entries:
     urls:
     - sonatype-nexus/sonatype-nexus-1.7.0.tgz
     version: 1.7.0
-generated: 2018-09-21T14:55:31.393352293Z
+generated: 2018-09-21T17:24:23.373463945Z
