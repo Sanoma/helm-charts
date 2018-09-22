@@ -60,7 +60,9 @@ data:
     #header {
       {{ if eq .Values.headerColor "red" }}
       background-image: linear-gradient(to right, #f83600 0%, #ff9800 100%);
-      {{ else }}
+      {{ else if eq .Values.headerColor "grey" }}
+      background-image: linear-gradient(to right, #111111, #2f2f2f, #505050, #747474, #999999);
+      {{ else if eq .Values.headerColor "blue" }}
       background-image: linear-gradient(to right, #09203f 0%, #537895 100%)
       {{ end }}
     }
