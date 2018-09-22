@@ -40,14 +40,15 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
 
 // Create jobs for components listed in `jobPaths` variable
 for (jobPath in jobProperties.jobPaths) {
-    def jobPathParts = jobPath.split("/")
-    def jobName = jobPathParts[-1]
-    def folderStructure = jobPathParts.init().join("/")
+    def directoryList = jobPath.split("/").init()
+    def n = directoryList.size()
+    def i = 0
 
-    // Create folder structure in Jenkins that mimics the structure of our
-    // Git repository
-    folder(folderStructure) {
-        description("Folder containing all Multibranch Pipeline jobs in " + folderStructure)
+    while (i < n) {
+      folder(directoryList.take(i + 1).join("/")) {
+        description("https://source.sanoma.com/projects/SMFDP/repos/smf-dp/browse/${directoryList.take(i + 1).join("/")}")
+      }
+      i = i + 1
     }
 
     // Create a job in that folder
