@@ -19,9 +19,13 @@ data:
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     }
 
-    a:visited {
-      text-decoration: underline;
+    a:link, a:visited {
+      text-decoration: none;
       color: #204A87;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     pre, xmp, plaintext, listing {

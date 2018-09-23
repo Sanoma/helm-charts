@@ -1,5 +1,5 @@
 name: jenkins
-version: 0.4.4
+version: 0.4.5
 appVersion: "2.141"
 description: Jenkins chart that uses configuration-as-code plugin
 keywords:
