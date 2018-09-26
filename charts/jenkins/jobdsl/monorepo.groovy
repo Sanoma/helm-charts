@@ -1,6 +1,10 @@
 // Create a Jenkins jobs for a complex monorepo
-// Create the main job that will trigger component-specific jobs
+
+// Jenkins job built using the Jenkinsfile in the root of a Bitbucket Server repository
 multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
+
+    displayName(jobProperties.bitbucketRepo.repoOwner + "/" + jobProperties.bitbucketRepo.repository)
+
     branchSources {
         branchSource {
             source {

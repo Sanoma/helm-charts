@@ -1,6 +1,7 @@
 // Create a jenkins job for a simple repo with one Jenkinsfile in repo root
 multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
     branchSources {
+        displayName(jobProperties.bitbucketRepo.repoOwner + "/" + jobProperties.bitbucketRepo.repository)
         branchSource {
             source {
                 bitbucket {
