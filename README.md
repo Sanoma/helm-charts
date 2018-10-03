@@ -14,4 +14,4 @@ helm repo update
 ## Acknowledgements
 
 - Thanks to @int128 for sharing how he used CircleCI to host Helm repos on GitHub Pages: <https://github.com/int128/helm-github-pages>
-- Thanks to gpii team for k8s-snapshots Helm chart https://github.com/gpii-ops/gpii-infra/tree/master/common/charts/k8s-snapshots
+- Thanks to gpii team for k8s-snapshots Helm chart https://github.com/gpii-ops/gpii-infra/tree/master/shared/charts/k8s-snapshots
