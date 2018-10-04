@@ -1,5 +1,5 @@
 image: jenkins/jenkins
-imageTag: 2.141-slim
+imageTag: 2.144-slim
 imagePullPolicy: Always
 javaOpts: ""
 
@@ -26,6 +26,9 @@ jobGenerator: []
 #   properties:
 #     branchFilterExcludes: ""
 #     branchFilterIncludes: ""
+#     periodicFolderTrigger:
+#       spec: "*/5 * * * *"
+#       interval: "300000"
 #     bitbucketRepo:
 #       serverUrl: ""
 #       repoOwner: ""
@@ -39,6 +42,9 @@ jobGenerator: []
 #   properties:
 #     branchFilterExcludes: ""
 #     branchFilterIncludes: ""
+#     periodicFolderTrigger:
+#       spec: "*/5 * * * *"
+#       interval: "300000"
 #     bitbucketRepo:
 #       serverUrl: ""
 #       repoOwner: ""

@@ -14,8 +14,8 @@ Jenkins master and dynamically-scaling slave cluster via the [Kuberntes plugin](
 jobGenerator:
 - type: monorepo
   properties:
-    branchFilterExcludes: master production
-    branchFilterIncludes: feature* hotfix* release*
+    branchFilterExcludes: feature* hotfix* fix*
+    branchFilterIncludes: ""
     bitbucketRepo:
       serverUrl: https://private.bitbucket.io
       repoOwner: monorepo-project
@@ -40,7 +40,7 @@ jobGenerator:
 - type: simple
   properties:
     branchFilterExcludes: master production
-    branchFilterIncludes: feature* hotfix* release*
+    branchFilterIncludes: ""
     bitbucketRepo:
       serverUrl: https://private.bitbucket.io
       repoOwner: simple-project
