@@ -14,8 +14,11 @@ Jenkins master and dynamically-scaling slave cluster via the [Kuberntes plugin](
 jobGenerator:
 - type: monorepo
   properties:
-    branchFilterExcludes: feature* hotfix* fix*
-    branchFilterIncludes: ""
+    branchFilterIncludes: feature* hotfix* fix*
+    branchFilterExcludes: ""
+    periodicFolderTrigger:
+      spec: "* * * * *"
+      interval: "60000"
     bitbucketRepo:
       serverUrl: https://private.bitbucket.io
       repoOwner: monorepo-project
@@ -39,8 +42,11 @@ The `jobPaths` variable specifies the paths in the monorepo that contain a Jenki
 jobGenerator:
 - type: simple
   properties:
-    branchFilterExcludes: master production
-    branchFilterIncludes: ""
+    branchFilterIncludes: master production
+    branchFilterExcludes: ""
+    periodicFolderTrigger:
+      spec: "*/5 * * * *"
+      interval: "300000"
     bitbucketRepo:
       serverUrl: https://private.bitbucket.io
       repoOwner: simple-project
