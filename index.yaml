@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   aws-iam-authenticator:
   - appVersion: 0.3.0
-    created: 2018-10-12T06:04:10.794843321Z
+    created: 2018-10-12T06:17:11.589952474Z
     description: Chart for aws-iam-authenticator
     digest: bb19e3273aaf6c4756bbffa19a743caca2e126e5f3493354229130c534fc04d2
     keywords:
@@ -17,7 +17,7 @@ entries:
     version: 0.1.0
   jenkins:
   - appVersion: "2.144"
-    created: 2018-10-12T06:04:10.799853227Z
+    created: 2018-10-12T06:17:11.594719116Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 16ace304136c8c71ff433bafc693e8605763a478d2b3327ef52a644ced59b1d2
     keywords:
@@ -36,7 +36,7 @@ entries:
     - jenkins/jenkins-0.6.0.tgz
     version: 0.6.0
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.799463417Z
+    created: 2018-10-12T06:17:11.594313544Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 850ba0e5a9fba39bf1f4c3b5512c9861bdac22abd35091c74f62ea5295fee31d
     keywords:
@@ -55,7 +55,7 @@ entries:
     - jenkins/jenkins-0.5.0.tgz
     version: 0.5.0
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.799082128Z
+    created: 2018-10-12T06:17:11.593927281Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 166a79c3128a750205b020aaa0e34589926e9aac38075e28082bfc2d18b5eeab
     keywords:
@@ -74,7 +74,7 @@ entries:
     - jenkins/jenkins-0.4.5.tgz
     version: 0.4.5
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.798686639Z
+    created: 2018-10-12T06:17:11.593544756Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 7bac9bc5e165ff9cc7bcd74f3407ba5d6de4dd597c7f9979adbcb585b4376f2e
     keywords:
@@ -93,7 +93,7 @@ entries:
     - jenkins/jenkins-0.4.4.tgz
     version: 0.4.4
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.798285288Z
+    created: 2018-10-12T06:17:11.593148889Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 3d9f0fc55f98a8b716e5d8110ff6a8e06a00a8da4b0bd5555a553299c2dafdd0
     keywords:
@@ -112,7 +112,7 @@ entries:
     - jenkins/jenkins-0.4.3.tgz
     version: 0.4.3
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.797878027Z
+    created: 2018-10-12T06:17:11.592761875Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 350ead8fa5b022db33980268f43406367d6d2a8bc9e014a34ceceb5b369a3038
     keywords:
@@ -131,7 +131,7 @@ entries:
     - jenkins/jenkins-0.4.3-SNAPSHOT.tgz
     version: 0.4.3-SNAPSHOT
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.797487407Z
+    created: 2018-10-12T06:17:11.59233174Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 07ca7d0a89734c22060b6fd7d0ac2175dfd635fae45c2002546a5e33293ebe79
     keywords:
@@ -150,7 +150,7 @@ entries:
     - jenkins/jenkins-0.4.3-2.tgz
     version: 0.4.3-2
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.797103183Z
+    created: 2018-10-12T06:17:11.591947713Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 09737d924c829252b39a45c8666c87754a3e28edddbe7d4940739f648ea19429
     keywords:
@@ -169,7 +169,7 @@ entries:
     - jenkins/jenkins-0.4.3-1.tgz
     version: 0.4.3-1
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.796698138Z
+    created: 2018-10-12T06:17:11.5915684Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: c700a2446ffaf0bfec48bfc0362c92622b9597deeaac383fd7a89b20e99b39cd
     keywords:
@@ -188,7 +188,7 @@ entries:
     - jenkins/jenkins-0.4.3-0.tgz
     version: 0.4.3-0
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.796290598Z
+    created: 2018-10-12T06:17:11.591145416Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 7b32fdfc8d49ffb963de67fcdeafabab9da0d6af4b68918038d7f05af69d1728
     keywords:
@@ -207,7 +207,7 @@ entries:
     - jenkins/jenkins-0.4.2.tgz
     version: 0.4.2
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.795880863Z
+    created: 2018-10-12T06:17:11.590765421Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: a7ce01ce7a64ea404eea94dd77d1531d6ef6d5aa45668c8b9730e9fc5548fbdb
     keywords:
@@ -226,7 +226,7 @@ entries:
     - jenkins/jenkins-0.4.1.tgz
     version: 0.4.1
   - appVersion: "2.141"
-    created: 2018-10-12T06:04:10.795410461Z
+    created: 2018-10-12T06:17:11.590353437Z
     description: Jenkins chart that uses configuration-as-code plugin
     digest: bb1b214381296eebc9a734dc5bd95d6c71d1a9540c954a4be9d32193558b8e3b
     keywords:
@@ -246,7 +246,7 @@ entries:
     version: 0.4.0
   k8s-snapshots:
   - appVersion: v2.0
-    created: 2018-10-12T06:04:10.80021951Z
+    created: 2018-10-12T06:17:11.595905884Z
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: 1737838a70a706ec0fb7c21ff5798829fc382f4a0f5ba56ff520f68a248bd216
     keywords:
@@ -260,7 +260,7 @@ entries:
     - k8s-snapshots/k8s-snapshots-0.2.0.tgz
     version: 0.2.0
   - appVersion: v2.0
-    created: 2018-10-12T06:04:10.800029597Z
+    created: 2018-10-12T06:17:11.595511617Z
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: e12dcb4eac0b434c0b281047e8daf9f03c589b1aa338de0c751464f504164f18
     keywords:
@@ -275,7 +275,7 @@ entries:
     version: 0.1.0
   letsencrypt:
   - apiVersion: v1
-    created: 2018-10-12T06:04:10.801088335Z
+    created: 2018-10-12T06:17:11.596154728Z
     description: Let's Encrypt ClusterIssuer and Certificates
     digest: d3a78cd9f52b1dbd74c5735281b9463d59a37a8f8812afa393023abc21b2b365
     maintainers:
@@ -287,7 +287,7 @@ entries:
     version: 0.2.0
   pdb:
   - apiVersion: v1
-    created: 2018-10-12T06:04:10.801424405Z
+    created: 2018-10-12T06:17:11.596379194Z
     description: A chart for creating PodDisruptionBudgets
     digest: 18e2116c192df7d3bf762a01b10caa8af3b38fe3cfdf45810687a1e066956772
     maintainers:
@@ -299,7 +299,18 @@ entries:
     version: 0.1.0
   pvc-recovery:
   - apiVersion: v1
-    created: 2018-10-12T06:04:10.801561381Z
+    created: 2018-10-12T06:17:11.597150367Z
+    description: A chart for creating PVC from EBS volumes
+    digest: 2cc4ce9f766cf6fd808c643da8427d0eb8dadb788a5b99b47707d1184b87c6fb
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: pvc-recovery
+    urls:
+    - pvc-recovery/pvc-recovery-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    created: 2018-10-12T06:17:11.596777423Z
     description: A chart for creating PVC from EBS volumes
     digest: e910c6613d482bc8e47c1a9402ff9714e052ba20252e64f6679f064aac99f159
     maintainers:
@@ -311,7 +322,7 @@ entries:
     version: 0.1.0
   rbac:
   - apiVersion: v1
-    created: 2018-10-12T06:04:10.801717776Z
+    created: 2018-10-12T06:17:11.597314094Z
     description: A Helm chart for Kubernetes
     digest: 71a762d208af56d8a81f0de1688d87f2d6e7d21672812ef824474de24649c1a7
     maintainers:
@@ -323,7 +334,7 @@ entries:
     version: 0.1.0
   sonatype-nexus:
   - appVersion: 3.12.1-01
-    created: 2018-10-12T06:04:10.802246568Z
+    created: 2018-10-12T06:17:11.597804626Z
     description: Sonatype Nexus is an open source repository manager
     digest: 40149998619a2365188c3d31771e9b4af216d175b476b32250e1ac0fd66f06ea
     home: https://www.sonatype.com/nexus-repository-oss
@@ -347,4 +358,4 @@ entries:
     urls:
     - sonatype-nexus/sonatype-nexus-1.7.0.tgz
     version: 1.7.0
-generated: 2018-10-12T06:04:10.794485832Z
+generated: 2018-10-12T06:17:11.589597027Z
