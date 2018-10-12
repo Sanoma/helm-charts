@@ -3,4 +3,6 @@ pvcList: []
 #   size: 1Gi
 #   ebsVolumeID: vol-0a2f65ebe774a25db
 #   ebsVolumeAZ: eu-west-1c
+#   existingPersistentVolume: ""
+#   persistentVolumeReclaimPolicy: Retain
 #   annotations: {}
