@@ -14,7 +14,7 @@ spec:
   - ReadWriteOnce
   capacity:
     storage: {{ .size }}
-  persistentVolumeReclaimPolicy: {{ .persistentVolumeReclaimPolicy }}
+  persistentVolumeReclaimPolicy: {{ .persistentVolumeReclaimPolicy | default "Delete" }}
 {{ end }}
 ---
 apiVersion: v1
