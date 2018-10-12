@@ -2,6 +2,7 @@ image: jenkins/jenkins
 imageTag: 2.144-slim
 imagePullPolicy: Always
 javaOpts: ""
+privilegedContainer: false
 
 masterTolerations: []
 masterNodeSelector: {}
