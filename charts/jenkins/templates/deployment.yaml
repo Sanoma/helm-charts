@@ -35,6 +35,10 @@ spec:
       - name: jenkins
         image: {{ .Values.image }}:{{ .Values.imageTag }}
         imagePullPolicy: {{ .Values.imagePullPolicy }}
+        lifecycle:
+          preStop:
+            exec:
+              command: ["sleep","20"]
         {{ if .Values.privilegedContainer }}
         securityContext:
           privileged: true

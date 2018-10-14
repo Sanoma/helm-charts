@@ -1,6 +1,6 @@
 name: jenkins
-version: 0.6.1
-appVersion: "2.144"
+version: 0.7.0-dev
+appVersion: "2.146"
 description: Jenkins chart that uses configuration-as-code plugin
 keywords:
 - continuous-delivery
