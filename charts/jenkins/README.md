@@ -20,12 +20,12 @@ jobGenerator:
       spec: "* * * * *"
       interval: "60000"
     bitbucketRepo:
-      serverUrl: https://private.bitbucket.io
+      serverUrl: https://private.bitbucket.example.com
       repoOwner: monorepo-project
       repository: monorepo
       credentialsId: bitbucket-userpass
     gitRepo:
-      url: ssh://git@private.bitbucket.io:7999/monorepo-project/monorepo.git
+      url: ssh://git@private.bitbucket.example.com:7999/monorepo-project/monorepo.git
       credentialsId: bitbucket-repo-ssh
     jobPaths:
     - group-a/component-1

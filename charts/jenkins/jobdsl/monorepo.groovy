@@ -11,18 +11,9 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
           repository(jobProperties.bitbucketRepo.repository)
           credentialsId(jobProperties.bitbucketRepo.credentialsId)
           traits {
-            // cleanBeforeCheckoutTrait()
-            // pruneStaleBranchTrait()
-            // cloneOptionTrait {
-            //   extension {
-            //     shallow(true)
-            //     noTags(true)
-            //
-            //   }
-            // }
             headWildcardFilter {
-              includes('PR*')
-              excludes('')
+              includes(jobProperties.branchFilterIncludes)
+              excludes(jobProperties.branchFilterExcludes)
             }
           }
         }
@@ -35,27 +26,17 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
   //   }
   // }
   configure {
-    def traits = it / sources / data / 'jenkins.branch.BranchSource' / source / traits
-
-    // traits << 'com.cloudbees.jenkins.plugins.bitbucket.BranchDiscoveryTrait' {
-    //   strategyId(1)
-    // }
-
-    traits << 'com.cloudbees.jenkins.plugins.bitbucket.OriginPullRequestDiscoveryTrait' {
-      strategyId(2)
-    }
-
     it / triggers / 'com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger' {
       spec(jobProperties.periodicFolderTrigger.spec)
       interval(jobProperties.periodicFolderTrigger.interval)
     }
   }
-  // configure {
-  //   def traits = it / sources / data / 'jenkins.branch.BranchSource' / source / traits
-  //   traits << 'com.cloudbees.jenkins.plugins.bitbucket.BranchDiscoveryTrait' {
-  //     strategyId(1) // detect all branches
-  //   }
-  // }
+  configure {
+    def traits = it / sources / data / 'jenkins.branch.BranchSource' / source / traits
+    traits << 'com.cloudbees.jenkins.plugins.bitbucket.BranchDiscoveryTrait' {
+      strategyId(3) // detect all branches
+    }
+  }
 }
 
 // Create jobs for components listed in `jobPaths` variable
@@ -86,12 +67,6 @@ for (jobPath in jobProperties.jobPaths) {
             remote(jobProperties.gitRepo.url)
             credentialsId(jobProperties.gitRepo.credentialsId)
             traits {
-            //   pruneStaleBranchTrait()
-              // cloneOptionTrait {
-              //   extension {
-              //     shallow(true)
-              //   }
-              // }
               headWildcardFilter {
                 includes(jobProperties.branchFilterIncludes)
                 excludes(jobProperties.branchFilterExcludes)
