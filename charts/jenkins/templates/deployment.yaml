@@ -31,14 +31,30 @@ spec:
       tolerations:
 {{ toYaml .Values.masterTolerations | indent 8 }}
       serviceAccountName: {{ template "jenkins.fullname" . }}
+      initContainers:
+      # Since we are configurting the jenkins master via configuration-as-code plugin
+      # We only persist things that are generated during the lifetime of a Jenkins master
+      # Everything else we clean up on every master restart
+      - name: jenkins-home-sanitizer
+        image: busybox
+        restartPolicy:
+        volumeMounts:
+        - name: {{ template "jenkins.fullname" . }}-home
+          mountPath: /var/jenkins_home
+        command: ["sh", "-c"]
+        args:
+        - |
+          find /var/jenkins_home \
+            -not -name 'users' \
+            -not -name 'jobs' \
+            -not -name 'nodes' \
+            -not -name 'scriptApproval.xml' \
+            -not -name 'javaposse.jobdsl.plugin.ExecuteDslScripts.xml' \
+            -delete
       containers:
       - name: jenkins
         image: {{ .Values.image }}:{{ .Values.imageTag }}
         imagePullPolicy: {{ .Values.imagePullPolicy }}
-        lifecycle:
-          preStop:
-            exec:
-              command: ["sleep","20"]
         {{ if .Values.privilegedContainer }}
         securityContext:
           privileged: true
@@ -64,16 +80,8 @@ spec:
         - name: jenkins-css
           mountPath: /var/jenkins_home/userContent/css
           readOnly: true
-        - name: {{ template "jenkins.fullname" . }}-job-data
-          mountPath: /var/jenkins_home/jobs
-        - name: {{ template "jenkins.fullname" . }}-user-data
-          mountPath: /var/jenkins_home/users
-        - name: {{ template "jenkins.fullname" . }}-script-approval
-          mountPath: /var/jenkins_home/scriptApproval.xml
-        - name: {{ template "jenkins.fullname" . }}-nodes
-          mountPath: /var/jenkins_home/nodes
-        - name: {{ template "jenkins.fullname" . }}-jobdsl-state
-          mountPath: /var/jenkins_home/javaposse.jobdsl.plugin.ExecuteDslScripts.xml
+        - name: {{ template "jenkins.fullname" . }}-home
+          mountPath: /var/jenkins_home
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         livenessProbe:
@@ -98,23 +106,10 @@ spec:
       - name: jenkins-css
         configMap:
           name: {{ template "jenkins.fullname" . }}-css
-      - name: {{ template "jenkins.fullname" . }}-job-data
+      - name: {{ template "jenkins.fullname" . }}-home
         persistentVolumeClaim:
-          {{ if not .Values.persistence.jobData.existingClaim }}
-          claimName: {{ template "jenkins.fullname" . }}-job-data
+          {{ if not .Values.persistence.existingClaim }}
+          claimName: {{ template "jenkins.fullname" . }}-home
           {{ else }}
-          claimName: {{ .Values.persistence.jobData.existingClaim }}
+          claimName: {{ .Values.persistence.existingClaim }}
           {{ end }}
-      - name: {{ template "jenkins.fullname" . }}-user-data
-        persistentVolumeClaim:
-          {{ if not .Values.persistence.userData.existingClaim }}
-          claimName: {{ template "jenkins.fullname" . }}-user-data
-          {{ else }}
-          claimName: {{ .Values.persistence.userData.existingClaim }}
-          {{ end }}
-      - name: {{ template "jenkins.fullname" . }}-script-approval
-        emptyDir: {}
-      - name: {{ template "jenkins.fullname" . }}-nodes
-        emptyDir: {}
-      - name: {{ template "jenkins.fullname" . }}-jobdsl-state
-        emptyDir: {}

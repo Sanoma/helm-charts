@@ -9,15 +9,32 @@ masterNodeSelector: {}
 podAnnotations: {}
 resources: []
 
+ingress:
+  enabled: false
+  # # Annotations to be added to the ingress
+  # #
+  # annotations:
+  #   kubernetes.io/ingress.class: nginx
+  #   kubernetes.io/tls-acme: "true"
+  #
+  # # Hostnames
+  # # Must be provided if Ingress is enabled
+  # #
+  # hosts:
+  #   - jenkins.domain.com
+  #
+  # # TLS configuration
+  # # Secrets must be manually created in the namespace
+  # #
+  # tls:
+  #   - secretName: argo-ui-tls
+  #     hosts:
+  #       - jenkins.domain.com
+
 persistence:
-  jobData:
-    size: 200Gi
-    annotations: {}
-    existingClaim: ""
-  userData:
-    size: 1Gi
-    annotations: {}
-    existingClaim: ""
+  size: 200Gi
+  annotations: {}
+  existingClaim: ""
 
 headerMessage: ""
 headerColor: red # blue
@@ -44,25 +61,3 @@ configuration:
 # ${} values inside "configuration" above
 secrets:
   name: jenkins-secrets
-
-ingress:
-  enabled: false
-  # # Annotations to be added to the ingress
-  # #
-  # annotations:
-  #   kubernetes.io/ingress.class: nginx
-  #   kubernetes.io/tls-acme: "true"
-  #
-  # # Hostnames
-  # # Must be provided if Ingress is enabled
-  # #
-  # hosts:
-  #   - jenkins.domain.com
-  #
-  # # TLS configuration
-  # # Secrets must be manually created in the namespace
-  # #
-  # tls:
-  #   - secretName: argo-ui-tls
-  #     hosts:
-  #       - jenkins.domain.com

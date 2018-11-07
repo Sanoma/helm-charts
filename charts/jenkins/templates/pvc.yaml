@@ -1,41 +1,20 @@
-{{ if not .Values.persistence.jobData.existingClaim }}
+{{ if not .Values.persistence.existingClaim }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ template "jenkins.fullname" . }}-job-data
+  name: {{ template "jenkins.fullname" . }}-home
   labels:
     app: {{ template "jenkins.fullname" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
-{{ toYaml .Values.persistence.jobData.annotations | indent 4 }}
+{{ toYaml .Values.persistence.annotations | indent 4 }}
 spec:
   accessModes:
   - ReadWriteOnce
   storageClassName: gp2
   resources:
     requests:
-      storage: {{ .Values.persistence.jobData.size }}
-{{ end }}
----
-{{ if not .Values.persistence.userData.existingClaim }}
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: {{ template "jenkins.fullname" . }}-user-data
-  labels:
-    app: {{ template "jenkins.fullname" . }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-  annotations:
-{{ toYaml .Values.persistence.userData.annotations | indent 4 }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  storageClassName: gp2
-  resources:
-    requests:
-      storage: {{ .Values.persistence.userData.size }}
+      storage: {{ .Values.persistence.size }}
 {{ end }}
