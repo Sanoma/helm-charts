@@ -41,10 +41,13 @@ spec:
         volumeMounts:
         - name: {{ template "jenkins.fullname" . }}-home
           mountPath: /var/jenkins_home
+        workingDir: /var/jenkins_home
         command: ["sh", "-c"]
         args:
         - |
           find /var/jenkins_home \
+            -not -name 'userContent/css/*' \
+            -not -name 'casc_configs/*' \
             -not -name 'users' \
             -not -name 'jobs' \
             -not -name 'nodes' \
