@@ -68,6 +68,12 @@ spec:
           mountPath: /var/jenkins_home/jobs
         - name: {{ template "jenkins.fullname" . }}-user-data
           mountPath: /var/jenkins_home/users
+        - name: {{ template "jenkins.fullname" . }}-script-approval
+          mountPath: /var/jenkins_home/scriptApproval.xml
+        - name: {{ template "jenkins.fullname" . }}-nodes
+          mountPath: /var/jenkins_home/nodes
+        - name: {{ template "jenkins.fullname" . }}-jobdsl-state
+          mountPath: /var/jenkins_home/javaposse.jobdsl.plugin.ExecuteDslScripts.xml
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         livenessProbe:
@@ -106,3 +112,9 @@ spec:
           {{ else }}
           claimName: {{ .Values.persistence.userData.existingClaim }}
           {{ end }}
+      - name: {{ template "jenkins.fullname" . }}-script-approval
+        emptyDir: {}
+      - name: {{ template "jenkins.fullname" . }}-nodes
+        emptyDir: {}
+      - name: {{ template "jenkins.fullname" . }}-jobdsl-state
+        emptyDir: {}

@@ -20,6 +20,13 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
           }
         }
       }
+      strategy {
+        defaultBranchPropertyStrategy {
+          props {
+            noTriggerBranchProperty()
+          }
+        }
+      }
     }
   }
   configure {
