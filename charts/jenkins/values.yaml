@@ -1,5 +1,5 @@
 image: jenkins/jenkins
-imageTag: 2.149-slim
+imageTag: latest
 imagePullPolicy: Always
 javaOpts: ""
 privilegedContainer: false
@@ -11,7 +11,7 @@ resources: []
 
 persistence:
   jobData:
-    size: 20Gi
+    size: 200Gi
     annotations: {}
     existingClaim: ""
   userData:
@@ -23,13 +23,9 @@ headerMessage: ""
 headerColor: red # blue
 
 jobGenerator: []
-# - type: monorepo
-#   properties:
+# - properties:
 #     branchFilterExcludes: ""
 #     branchFilterIncludes: ""
-#     periodicFolderTrigger:
-#       spec: "*/5 * * * *"
-#       interval: "300000"
 #     bitbucketRepo:
 #       serverUrl: ""
 #       repoOwner: ""
@@ -37,19 +33,6 @@ jobGenerator: []
 #       credentialsId: ""
 #     gitRepo:
 #       url: ""
-#       credentialsId: ""
-#     jobPaths: []
-# - type: simple
-#   properties:
-#     branchFilterExcludes: ""
-#     branchFilterIncludes: ""
-#     periodicFolderTrigger:
-#       spec: "*/5 * * * *"
-#       interval: "300000"
-#     bitbucketRepo:
-#       serverUrl: ""
-#       repoOwner: ""
-#       repository: ""
 #       credentialsId: ""
 
 # Used by "configuration-as-code" plugin

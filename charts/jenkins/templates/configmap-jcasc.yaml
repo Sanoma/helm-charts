@@ -13,14 +13,7 @@ data:
 
     jobs:
 {{ range .Values.jobGenerator }}
-{{ if eq .type "monorepo" }}
     - script: |
         def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson .properties }}')
-{{ $.Files.Get "jobdsl/monorepo.groovy" | indent 8 }}
-{{ end }}
-{{ if eq .type "simple" }}
-    - script: |
-        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson .properties }}')
-{{ $.Files.Get "jobdsl/simple.groovy" | indent 8 }}
-{{ end }}
+{{ $.Files.Get "jobdsl/job.groovy" | indent 8 }}
 {{ end }}
