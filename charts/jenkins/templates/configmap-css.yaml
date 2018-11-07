@@ -82,3 +82,7 @@ data:
     .console-output a:visited {
       color: #8888ff;
     }
+
+    .pipeline-new-node {
+      display: none;
+    }
