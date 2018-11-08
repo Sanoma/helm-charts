@@ -23,6 +23,9 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
       }
     }
   }
+  orphanedItemStrategy {
+    discardOldItems {}
+  }
   configure {
     def traits = it / sources / data / 'jenkins.branch.BranchSource' / source / traits
     traits << 'com.cloudbees.jenkins.plugins.bitbucket.BranchDiscoveryTrait' {
