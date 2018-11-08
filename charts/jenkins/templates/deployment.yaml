@@ -31,33 +31,13 @@ spec:
       tolerations:
 {{ toYaml .Values.masterTolerations | indent 8 }}
       serviceAccountName: {{ template "jenkins.fullname" . }}
-      initContainers:
-      # Since we are configurting the jenkins master via configuration-as-code plugin
-      # We only persist things that are generated during the lifetime of a Jenkins master
-      # Everything else we clean up on every master restart
-      - name: jenkins-home-sanitizer
-        image: busybox
-        restartPolicy:
-        volumeMounts:
-        - name: {{ template "jenkins.fullname" . }}-home
-          mountPath: /var/jenkins_home
-        workingDir: /var/jenkins_home
-        command: ["sh", "-c"]
-        args:
-        - |
-          find /var/jenkins_home \
-            -not -name 'userContent/css/*' \
-            -not -name 'casc_configs/*' \
-            -not -name 'users' \
-            -not -name 'jobs' \
-            -not -name 'nodes' \
-            -not -name 'scriptApproval.xml' \
-            -not -name 'javaposse.jobdsl.plugin.ExecuteDslScripts.xml' \
-            -delete
       containers:
       - name: jenkins
         image: {{ .Values.image }}:{{ .Values.imageTag }}
         imagePullPolicy: {{ .Values.imagePullPolicy }}
+        command: ["sh", "-c"]
+        args:
+        - /sbin/tini -- /usr/local/bin/jenkins.sh
         {{ if .Values.privilegedContainer }}
         securityContext:
           privileged: true
@@ -100,6 +80,13 @@ spec:
           initialDelaySeconds: 60
           timeoutSeconds: 5
       volumes:
+      - name: {{ template "jenkins.fullname" . }}-home
+        persistentVolumeClaim:
+          {{ if not .Values.persistence.jenkinsHome.existingClaim }}
+          claimName: {{ template "jenkins.fullname" . }}-home
+          {{ else }}
+          claimName: {{ .Values.persistence.jenkinsHome.existingClaim }}
+          {{ end }}
       - name: jenkins-configuration-as-code
         configMap:
           name: {{ template "jenkins.fullname" . }}-jcasc
@@ -109,10 +96,3 @@ spec:
       - name: jenkins-css
         configMap:
           name: {{ template "jenkins.fullname" . }}-css
-      - name: {{ template "jenkins.fullname" . }}-home
-        persistentVolumeClaim:
-          {{ if not .Values.persistence.existingClaim }}
-          claimName: {{ template "jenkins.fullname" . }}-home
-          {{ else }}
-          claimName: {{ .Values.persistence.existingClaim }}
-          {{ end }}

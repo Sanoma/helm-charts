@@ -1,4 +1,4 @@
-{{ if not .Values.persistence.existingClaim }}
+{{ if not .Values.persistence.jenkinsHome.existingClaim }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -9,12 +9,12 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
-{{ toYaml .Values.persistence.annotations | indent 4 }}
+{{ toYaml .Values.persistence.jenkinsHome.annotations | indent 4 }}
 spec:
   accessModes:
   - ReadWriteOnce
   storageClassName: gp2
   resources:
     requests:
-      storage: {{ .Values.persistence.size }}
+      storage: {{ .Values.persistence.jenkinsHome.size }}
 {{ end }}

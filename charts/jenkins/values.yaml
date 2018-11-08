@@ -32,12 +32,12 @@ ingress:
   #       - jenkins.domain.com
 
 persistence:
-  size: 200Gi
-  annotations: {}
-  existingClaim: ""
+  jenkinsHome:
+    size: 200Gi
+    annotations: {}
 
-headerMessage: ""
 headerColor: red # blue
+headerMessage: ""
 
 jobGenerator: []
 # - properties:
