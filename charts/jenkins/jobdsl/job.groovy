@@ -10,10 +10,10 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
           repository(jobProperties.bitbucketRepo.repository)
           credentialsId(jobProperties.bitbucketRepo.credentialsId)
           traits {
+            localBranchTrait()
             sshCheckoutTrait {
               credentialsId(jobProperties.gitRepo.credentialsId)
             }
-            localBranchTrait()
             headWildcardFilter {
               includes(jobProperties.branchDiscoveryIncludes)
               excludes(jobProperties.branchDiscoveryExcludes)
