@@ -24,8 +24,8 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
       buildStrategies {
         buildNamedBranches {
           filters {
-            caseSensitive(true)
             wildcards {
+              caseSensitive(true)
               includes(jobProperties.branchPushTriggerIncludes)
               excludes(jobProperties.branchPushTriggerExcludes)
             }
