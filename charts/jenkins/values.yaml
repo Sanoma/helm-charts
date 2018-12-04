@@ -41,8 +41,10 @@ headerMessage: ""
 
 jobGenerator: []
 # - properties:
-#     branchFilterExcludes: ""
-#     branchFilterIncludes: ""
+#     branchDiscoveryExcludes: ""
+#     branchDiscoveryIncludes: ""
+#     branchPushTriggerIncludes: ""
+#     branchPushTriggerExcludes: ""
 #     bitbucketRepo:
 #       serverUrl: ""
 #       repoOwner: ""

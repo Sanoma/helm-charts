@@ -10,14 +10,23 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
           repository(jobProperties.bitbucketRepo.repository)
           credentialsId(jobProperties.bitbucketRepo.credentialsId)
           traits {
-            ignoreOnPushNotificationTrait()
             sshCheckoutTrait {
               credentialsId(jobProperties.gitRepo.credentialsId)
             }
             localBranchTrait()
             headWildcardFilter {
-              includes(jobProperties.branchFilterIncludes)
-              excludes(jobProperties.branchFilterExcludes)
+              includes(jobProperties.branchDiscoveryIncludes)
+              excludes(jobProperties.branchDiscoveryExcludes)
+            }
+          }
+        }
+      }
+      buildStrategies {
+        buildNamedBranches {
+          filters {
+            wildcards {
+              includes(jobProperties.branchPushTriggerIncludes)
+              excludes(jobProperties.branchPushTriggerExcludes)
             }
           }
         }
