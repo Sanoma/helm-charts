@@ -1,0 +1,36 @@
+# Default values for prometheus-to-cloudwatch. Update them per your requirements
+#
+replicaCount: 1
+
+env:
+  CLOUDWATCH_NAMESPACE: "kube-state-metrics"
+  CLOUDWATCH_REGION: "us-east-1"
+  CLOUDWATCH_PUBLISH_TIMEOUT: "5"
+  PROMETHEUS_SCRAPE_INTERVAL: "20"
+  PROMETHEUS_SCRAPE_URL: "http://xxxxxxxxxxxx:8080/metrics"
+  CERT_PATH: ""
+  KEY_PATH: ""
+  ACCEPT_INVALID_CERT: "true"
+  REPLACE_DIMENSIONS: "xxx=yyy,aaa=bbb"
+
+secrets:
+  AWS_ACCESS_KEY_ID:
+  AWS_SECRET_ACCESS_KEY:
+
+image:
+  repository: "cloudposse/prometheus-to-cloudwatch"
+  tag: "0.1.2"
+  pullPolicy: "Always"
+
+annotations: {}
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+volume:
+  emptyDir: {}
