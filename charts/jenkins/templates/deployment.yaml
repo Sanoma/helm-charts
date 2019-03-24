@@ -51,7 +51,7 @@ spec:
         - name: JAVA_TOOL_OPTIONS
           value: "{{ .Values.javaOpts }}"
         - name: CASC_JENKINS_CONFIG
-          value: /var/jenkins_home/casc_configs/..data/jenkins.yaml
+          value: /var/jenkins_home/casc_configs/jenkins.yaml
         - name: SECRETS
           value: /secrets/jenkins
         volumeMounts:
