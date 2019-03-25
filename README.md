@@ -1,4 +1,4 @@
-# Helm charts
+# sanoma/helm-charts
 
 [![CircleCI](https://circleci.com/gh/sanoma/helm-charts.svg?style=svg)](https://circleci.com/gh/sanoma/helm-charts)
 
@@ -7,7 +7,7 @@ This is a collection of open-source Helm charts used internally at Sanoma, avail
 ## Add the repository to Helm
 
 ```sh
-helm repo add smfdp https://sanoma.github.io/helm-charts
+helm repo add sanoma-charts https://sanoma.github.io/helm-charts
 helm repo update
 ```
 

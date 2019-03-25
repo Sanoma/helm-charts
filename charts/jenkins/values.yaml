@@ -27,7 +27,7 @@ ingress:
   # # Secrets must be manually created in the namespace
   # #
   # tls:
-  #   - secretName: argo-ui-tls
+  #   - secretName: jenkins-domain-tls
   #     hosts:
   #       - jenkins.domain.com
 

@@ -5,7 +5,7 @@ A Helm chart for deploying a Jenkins master and dynamically-scaling slave cluste
 | Chart version | Kubernetes version |
 | --- | --- |
 | `0.9.3` | At least `1.9.x` and `1.10.x` |
-| `1.0.0` | At least `1.11.x` |
+| `1.0.0`+ | At least `1.11.x` |
 
 ## Features
 
