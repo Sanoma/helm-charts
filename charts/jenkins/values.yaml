@@ -1,5 +1,5 @@
 image: jenkins/jenkins
-imageTag: latest
+imageTag: latest # Needs to be an image with https://github.com/jenkinsci/configuration-as-code-plugin
 imagePullPolicy: Always
 javaOpts: ""
 privilegedContainer: false
@@ -33,12 +33,14 @@ ingress:
 
 persistence:
   jenkinsHome:
-    size: 200Gi
+    size: 20Gi
     annotations: {}
 
-headerColor: red # blue
-headerMessage: ""
+headerColor: red # grey | blue
+headerMessage: "" # E.g. "Jenkins for MyCorp"
 
+# Only for Bitbucket Server
+# Converted to a jobDSL script by the chart then used by jcasc plugin
 jobGenerator: []
 # - properties:
 #     branchDiscoveryExcludes: ""

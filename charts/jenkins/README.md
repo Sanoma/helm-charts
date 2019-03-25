@@ -1,6 +1,11 @@
 # Jenkins Helm Chart
 
-Jenkins master and dynamically-scaling slave cluster via the [Kuberntes plugin](https://github.com/jenkinsci/kubernetes-plugin)
+A Helm chart for deploying a Jenkins master and dynamically-scaling slave cluster via the [Kubernetes plugin](https://github.com/jenkinsci/kubernetes-plugin)
+
+| Chart version | Kubernetes version |
+| --- | --- |
+| `0.9.3` | At least `1.9.x` and `1.10.x` |
+| `1.0.0` | At least `1.11.x` |
 
 ## Features
 
