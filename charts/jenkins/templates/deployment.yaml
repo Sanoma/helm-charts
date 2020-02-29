@@ -71,13 +71,13 @@ spec:
           httpGet:
             path: /login
             port: 8080
-          initialDelaySeconds: 60
+          initialDelaySeconds: 120
           timeoutSeconds: 5
         readinessProbe:
           httpGet:
             path: /login
             port: 8080
-          initialDelaySeconds: 60
+          initialDelaySeconds: 120
           timeoutSeconds: 5
       volumes:
       - name: {{ template "jenkins.fullname" . }}-home
