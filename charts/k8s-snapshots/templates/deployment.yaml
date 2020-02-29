@@ -5,6 +5,9 @@ metadata:
   name: {{ template "k8s-snapshots.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "k8s-snapshots.name" . }}
   template:
     metadata:
     {{- if .Values.podAnnotations }}
