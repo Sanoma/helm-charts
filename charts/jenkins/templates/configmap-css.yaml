@@ -86,3 +86,11 @@ data:
     .pipeline-new-node {
       display: none;
     }
+
+    /*
+      Undo this: https://github.com/jenkinsci/workflow-job-plugin/blob/master/CHANGELOG.md#231
+      since it produces undesirable UI effect (overflowing left side of the screen)
+    */
+    span[class^=pipeline-node-]::before {
+      display: none !important;
+    }
