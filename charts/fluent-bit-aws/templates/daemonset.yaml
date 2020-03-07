@@ -8,6 +8,10 @@ metadata:
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ template "fluent-bit.name" . }}
+      release: {{ .Release.Name }}
   updateStrategy:
     type: RollingUpdate
   template:
