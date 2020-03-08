@@ -3,7 +3,7 @@ entries:
   aws-iam-authenticator:
   - apiVersion: v1
     appVersion: 0.3.0
-    created: "2020-03-08T07:49:51.814548942Z"
+    created: "2020-03-08T10:43:40.505365113Z"
     description: Chart for aws-iam-authenticator
     digest: bb19e3273aaf6c4756bbffa19a743caca2e126e5f3493354229130c534fc04d2
     keywords:
@@ -19,9 +19,9 @@ entries:
   fluent-bit-aws:
   - apiVersion: v1
     appVersion: 1.2.0
-    created: "2020-03-08T07:49:51.817843276Z"
+    created: "2020-03-08T10:43:40.509315284Z"
     description: Fast and Lightweight Log/Data Forwarder for Linux, BSD and OSX
-    digest: bfe5b6ed85b091ceb879f325588910ef3b3d621beb613321119aae92445c92de
+    digest: 58d7714d656dd5b85243c1cb09dc7858686b75558a3a95e5eadcc751f1b51105
     home: https://fluentbit.io
     icon: https://fluentbit.io/assets/img/logo1-default.png
     keywords:
@@ -44,7 +44,7 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: 1.2.0
-    created: "2020-03-08T07:49:51.816605843Z"
+    created: "2020-03-08T10:43:40.507946517Z"
     description: Fast and Lightweight Log/Data Forwarder for Linux, BSD and OSX
     digest: 559682ab675b523f3bc2001cf8a86a3ac898178b8184c60dfcf1e53362cff06b
     home: https://fluentbit.io
@@ -69,9 +69,9 @@ entries:
     version: 0.0.1
   jenkins:
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.83349152Z"
+    created: "2020-03-08T10:43:40.529836874Z"
     description: Jenkins chart that uses configuration-as-code plugin
-    digest: 6d292761019adf3bfcc86d521aabed326c92b1962e111f5fca81de4fdc075ca3
+    digest: 385b4188c84d9c131318430c92d3f712aae44b8fef19a3fce2427ea11c4c4b27
     keywords:
     - continuous-delivery
     - continuous-deployment
@@ -88,7 +88,7 @@ entries:
     - jenkins/jenkins-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.832836862Z"
+    created: "2020-03-08T10:43:40.52915545Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 15c266c453dffa67d2c667f779ca9de361fcbca0a8a60e3b388270bf23a21fe8
     keywords:
@@ -107,7 +107,7 @@ entries:
     - jenkins/jenkins-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.832385186Z"
+    created: "2020-03-08T10:43:40.528388417Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: af92c53264c63f1b19af2ee5fd8840a0a64da95da2cad8a7ef533e2ffdbd8152
     keywords:
@@ -126,7 +126,7 @@ entries:
     - jenkins/jenkins-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.831895022Z"
+    created: "2020-03-08T10:43:40.527726651Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: d8c7a51d95dfa0124c4b66c3776efac2f2a1bee001a858581e2d94a32ac7b332
     keywords:
@@ -145,7 +145,7 @@ entries:
     - jenkins/jenkins-0.9.4.tgz
     version: 0.9.4
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.831427749Z"
+    created: "2020-03-08T10:43:40.526962779Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: f10349421abc7142e80f30e875cb248f5a21b5f35b5c56ccc4ca47f311439cd4
     keywords:
@@ -164,7 +164,7 @@ entries:
     - jenkins/jenkins-0.9.3.tgz
     version: 0.9.3
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.830978751Z"
+    created: "2020-03-08T10:43:40.526201083Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 6f8489f6ed264a1e24e77841541d0716e8cf036d3f7098f419c1a18c22e4e90c
     keywords:
@@ -183,7 +183,7 @@ entries:
     - jenkins/jenkins-0.9.2.tgz
     version: 0.9.2
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.830523556Z"
+    created: "2020-03-08T10:43:40.525410746Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 9408fbb6fbdd76d3290036186e54f0acf70b68baebdcdf2bfa7e4b4468555278
     keywords:
@@ -202,7 +202,7 @@ entries:
     - jenkins/jenkins-0.9.1.tgz
     version: 0.9.1
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.830063683Z"
+    created: "2020-03-08T10:43:40.524620779Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: b0d0bf9c299cdb58df59cc9a44a912e950e48b6870230906ccbd2973f16a2e49
     keywords:
@@ -221,7 +221,7 @@ entries:
     - jenkins/jenkins-0.9.0.tgz
     version: 0.9.0
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.829571362Z"
+    created: "2020-03-08T10:43:40.52388483Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: c09c3bf9a9777d825fbaa63f8b6ec8818800d53757a24ac68b2c1342cd543972
     keywords:
@@ -240,7 +240,7 @@ entries:
     - jenkins/jenkins-0.8.2.tgz
     version: 0.8.2
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.829083628Z"
+    created: "2020-03-08T10:43:40.523104036Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 1dbde2394e391bee595e3311c0e71c20dae68ece7f0bfefe9e2ed53d5d4a9edf
     keywords:
@@ -259,7 +259,7 @@ entries:
     - jenkins/jenkins-0.8.1.tgz
     version: 0.8.1
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.828623676Z"
+    created: "2020-03-08T10:43:40.522451089Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 5ec0d0b36e8c6c55c5df9f9d8698807e6d3d0f51f0dae45f9ecded2cface2013
     keywords:
@@ -278,7 +278,7 @@ entries:
     - jenkins/jenkins-0.8.0.tgz
     version: 0.8.0
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.828176433Z"
+    created: "2020-03-08T10:43:40.521752928Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: b70b216386dc839a0abd95261a563fd2691bb2ab4dccbf0c016587eeb456dca4
     keywords:
@@ -297,7 +297,7 @@ entries:
     - jenkins/jenkins-0.8.0-dev.tgz
     version: 0.8.0-dev
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.827676752Z"
+    created: "2020-03-08T10:43:40.52096403Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 4eaf9b5270c58195d69b5658c6637c6d9d25b1a223b7b3bd8f508e5e2df0357e
     keywords:
@@ -316,7 +316,7 @@ entries:
     - jenkins/jenkins-0.7.2-dev.tgz
     version: 0.7.2-dev
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.827199869Z"
+    created: "2020-03-08T10:43:40.520313018Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 0e26cc7366884f2dc1b937ec6c0dea1917d76d7d695a8261e14fb2408c1df7de
     keywords:
@@ -335,7 +335,7 @@ entries:
     - jenkins/jenkins-0.7.1.tgz
     version: 0.7.1
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.826732488Z"
+    created: "2020-03-08T10:43:40.519426946Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 41e5049ebded3afffc16a3b49fbdca053f6ceb64cbb01779d018c24cdb66b5d2
     keywords:
@@ -355,7 +355,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: "2.149"
-    created: "2020-03-08T07:49:51.826241115Z"
+    created: "2020-03-08T10:43:40.518579498Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: a2130c7bda5ab07484584031f824630a644800f5e10d0a5af16a4491308038f4
     keywords:
@@ -375,7 +375,7 @@ entries:
     version: 0.6.2
   - apiVersion: v1
     appVersion: "2.144"
-    created: "2020-03-08T07:49:51.825697821Z"
+    created: "2020-03-08T10:43:40.517696255Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: facdae34767016f1b7a363098258384eb457a6af9e4b87bb2a066ac72074a75d
     keywords:
@@ -395,7 +395,7 @@ entries:
     version: 0.6.1
   - apiVersion: v1
     appVersion: "2.144"
-    created: "2020-03-08T07:49:51.824411959Z"
+    created: "2020-03-08T10:43:40.516159515Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 16ace304136c8c71ff433bafc693e8605763a478d2b3327ef52a644ced59b1d2
     keywords:
@@ -415,7 +415,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.823817386Z"
+    created: "2020-03-08T10:43:40.515536048Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 850ba0e5a9fba39bf1f4c3b5512c9861bdac22abd35091c74f62ea5295fee31d
     keywords:
@@ -435,7 +435,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.823272139Z"
+    created: "2020-03-08T10:43:40.514955112Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 166a79c3128a750205b020aaa0e34589926e9aac38075e28082bfc2d18b5eeab
     keywords:
@@ -455,7 +455,7 @@ entries:
     version: 0.4.5
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.822718584Z"
+    created: "2020-03-08T10:43:40.514377661Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 7bac9bc5e165ff9cc7bcd74f3407ba5d6de4dd597c7f9979adbcb585b4376f2e
     keywords:
@@ -475,7 +475,7 @@ entries:
     version: 0.4.4
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.822128119Z"
+    created: "2020-03-08T10:43:40.513803219Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 3d9f0fc55f98a8b716e5d8110ff6a8e06a00a8da4b0bd5555a553299c2dafdd0
     keywords:
@@ -495,7 +495,7 @@ entries:
     version: 0.4.3
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.821577533Z"
+    created: "2020-03-08T10:43:40.513215631Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 350ead8fa5b022db33980268f43406367d6d2a8bc9e014a34ceceb5b369a3038
     keywords:
@@ -515,7 +515,7 @@ entries:
     version: 0.4.3-SNAPSHOT
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.821013451Z"
+    created: "2020-03-08T10:43:40.51263759Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 07ca7d0a89734c22060b6fd7d0ac2175dfd635fae45c2002546a5e33293ebe79
     keywords:
@@ -535,7 +535,7 @@ entries:
     version: 0.4.3-2
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.820463459Z"
+    created: "2020-03-08T10:43:40.512027802Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 09737d924c829252b39a45c8666c87754a3e28edddbe7d4940739f648ea19429
     keywords:
@@ -555,7 +555,7 @@ entries:
     version: 0.4.3-1
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.81987132Z"
+    created: "2020-03-08T10:43:40.511442002Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: c700a2446ffaf0bfec48bfc0362c92622b9597deeaac383fd7a89b20e99b39cd
     keywords:
@@ -575,7 +575,7 @@ entries:
     version: 0.4.3-0
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.819371395Z"
+    created: "2020-03-08T10:43:40.510912287Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 7b32fdfc8d49ffb963de67fcdeafabab9da0d6af4b68918038d7f05af69d1728
     keywords:
@@ -595,7 +595,7 @@ entries:
     version: 0.4.2
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.818861346Z"
+    created: "2020-03-08T10:43:40.510390173Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: a7ce01ce7a64ea404eea94dd77d1531d6ef6d5aa45668c8b9730e9fc5548fbdb
     keywords:
@@ -615,7 +615,7 @@ entries:
     version: 0.4.1
   - apiVersion: v1
     appVersion: "2.141"
-    created: "2020-03-08T07:49:51.818356811Z"
+    created: "2020-03-08T10:43:40.509843752Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: bb1b214381296eebc9a734dc5bd95d6c71d1a9540c954a4be9d32193558b8e3b
     keywords:
@@ -636,9 +636,9 @@ entries:
   k8s-snapshots:
   - apiVersion: v1
     appVersion: v2.0
-    created: "2020-03-08T07:49:51.834899325Z"
+    created: "2020-03-08T10:43:40.53164417Z"
     description: Chart for k8s-snapshots for schedules volume snapshots
-    digest: a8c8f4332614fd733ad15ac6110c1129659882cdb4fcb5050197818e19986a39
+    digest: b2af6a0cb6f65281a821400d8022bc34ba295288b64f0a9de16cd38c92673a2e
     keywords:
     - volume
     - snapshot
@@ -651,7 +651,7 @@ entries:
     version: 0.3.1
   - apiVersion: v1
     appVersion: v2.0
-    created: "2020-03-08T07:49:51.834675638Z"
+    created: "2020-03-08T10:43:40.531396381Z"
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: a7d2251d53fd310fa885f23a2766c5ed914a15f146bcff4bb008bd21e852e812
     keywords:
@@ -666,7 +666,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: v2.0
-    created: "2020-03-08T07:49:51.834451667Z"
+    created: "2020-03-08T10:43:40.531088542Z"
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: 1737838a70a706ec0fb7c21ff5798829fc382f4a0f5ba56ff520f68a248bd216
     keywords:
@@ -681,7 +681,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: v2.0
-    created: "2020-03-08T07:49:51.834211393Z"
+    created: "2020-03-08T10:43:40.530689383Z"
     description: Chart for k8s-snapshots for schedules volume snapshots
     digest: e12dcb4eac0b434c0b281047e8daf9f03c589b1aa338de0c751464f504164f18
     keywords:
@@ -696,9 +696,9 @@ entries:
     version: 0.1.0
   letsencrypt:
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.835054458Z"
+    created: "2020-03-08T10:43:40.531812255Z"
     description: Let's Encrypt ClusterIssuer and Certificates
-    digest: d2e083f42862f63478ca8cb7afe8abc5dfc4f7c9d539614055f2d27b0e00b576
+    digest: 8ee633e0504f707c754f954ab820c6c16638c4657c93b046759d310ec68a04f1
     maintainers:
     - email: ilya.sotkov@sanoma.com
       name: Ilya Sotkov
@@ -708,9 +708,9 @@ entries:
     version: 0.2.0
   pdb:
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.835190539Z"
+    created: "2020-03-08T10:43:40.532000967Z"
     description: A chart for creating PodDisruptionBudgets
-    digest: 99900c93a307d26c8b09c0a069ab7208488f8da73807dd1558d23c9d1becde87
+    digest: 893f1d2bb2bc33bf1fd38abfa28c2831b7d5f9bf75d7e6a8ac50c61a77fd351c
     maintainers:
     - email: ilya.sotkov@sanoma.com
       name: Ilya Sotkov
@@ -721,7 +721,20 @@ entries:
   prometheus-to-cloudwatch:
   - apiVersion: v1
     appVersion: 0.1.2
-    created: "2020-03-08T07:49:51.836187817Z"
+    created: "2020-03-08T10:43:40.533998745Z"
+    dependencies:
+    - name: common
+      repository: https://kubernetes-charts-incubator.storage.googleapis.com/
+      version: 0.0.4
+    description: A Helm chart for prometheus-to-cloudwatch
+    digest: 1039846e320ef811e49932c8a0f9541c81836c31bbe41390e87fc75012c6cff5
+    name: prometheus-to-cloudwatch
+    urls:
+    - prometheus-to-cloudwatch/prometheus-to-cloudwatch-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: 0.1.2
+    created: "2020-03-08T10:43:40.533030873Z"
     dependencies:
     - name: common
       repository: https://kubernetes-charts-incubator.storage.googleapis.com/
@@ -734,9 +747,9 @@ entries:
     version: 0.1.2
   pvc-recovery:
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.836769463Z"
+    created: "2020-03-08T10:43:40.534625175Z"
     description: A chart for creating PVC from EBS volumes
-    digest: 9a19adb87c3b65a6b7608be1d21ef2b9bd3419754f238092c1dce8ba389fa4d3
+    digest: f388f09fdbeaec0960e0fac6ac4eb61b5fdb10ef2b9c6659c033eeae0eabc1b3
     maintainers:
     - email: ilya.sotkov@sanoma.com
       name: Ilya Sotkov
@@ -745,7 +758,7 @@ entries:
     - pvc-recovery/pvc-recovery-0.3.1.tgz
     version: 0.3.1
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.836627533Z"
+    created: "2020-03-08T10:43:40.534468268Z"
     description: A chart for creating PVC from EBS volumes
     digest: 5eb942d6dfae0b6529e405763421edfc0456e1bb9505bad83752ededc9820ad6
     maintainers:
@@ -756,7 +769,7 @@ entries:
     - pvc-recovery/pvc-recovery-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.836485355Z"
+    created: "2020-03-08T10:43:40.534314294Z"
     description: A chart for creating PVC from EBS volumes
     digest: 2cc4ce9f766cf6fd808c643da8427d0eb8dadb788a5b99b47707d1184b87c6fb
     maintainers:
@@ -767,7 +780,7 @@ entries:
     - pvc-recovery/pvc-recovery-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.836342266Z"
+    created: "2020-03-08T10:43:40.534160959Z"
     description: A chart for creating PVC from EBS volumes
     digest: e910c6613d482bc8e47c1a9402ff9714e052ba20252e64f6679f064aac99f159
     maintainers:
@@ -779,9 +792,9 @@ entries:
     version: 0.1.0
   rbac:
   - apiVersion: v1
-    created: "2020-03-08T07:49:51.836948788Z"
+    created: "2020-03-08T10:43:40.534812671Z"
     description: A Helm chart for Kubernetes
-    digest: 2045b4bbe534951a1c56927f089d21ef671b89fa16855700a2f44c5230309be2
+    digest: 983dd242d4ca9a1f4bc149fc4ffedbfab53ec5f90019e30d6be15813e6347b18
     maintainers:
     - email: ilya.sotkov@sanoma.com
       name: Ilya Sotkov
@@ -792,7 +805,7 @@ entries:
   sonatype-nexus:
   - apiVersion: v1
     appVersion: 3.12.1-01
-    created: "2020-03-08T07:49:51.837672668Z"
+    created: "2020-03-08T10:43:40.535551241Z"
     description: Sonatype Nexus is an open source repository manager
     digest: 40149998619a2365188c3d31771e9b4af216d175b476b32250e1ac0fd66f06ea
     home: https://www.sonatype.com/nexus-repository-oss
@@ -816,4 +829,4 @@ entries:
     urls:
     - sonatype-nexus/sonatype-nexus-1.7.0.tgz
     version: 1.7.0
-generated: "2020-03-08T07:49:51.814171342Z"
+generated: "2020-03-08T10:43:40.504723866Z"
