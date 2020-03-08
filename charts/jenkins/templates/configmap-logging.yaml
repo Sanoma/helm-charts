@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "jenkins.fullname" . }}-logging-properties
+  labels:
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    namspace: {{ .Release.Namespace }}
+data:
+  logging.properties: |
+{{ toYaml .Values.loggingProperties | indent 4 }}

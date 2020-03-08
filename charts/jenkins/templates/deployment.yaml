@@ -48,8 +48,8 @@ spec:
         - name: slavelistener
           containerPort: 50000
         env:
-        - name: JAVA_TOOL_OPTIONS
-          value: "{{ .Values.javaOpts }}"
+        - name: JAVA_OPTS
+          value: "-Djava.util.logging.config.file=/var/jenkins_home/userContent/logging-conf/logging.properties {{ .Values.javaOpts }}"
         - name: CASC_JENKINS_CONFIG
           value: /var/jenkins_home/casc_configs/jenkins.yaml
         - name: SECRETS
@@ -62,6 +62,9 @@ spec:
           readOnly: true
         - name: jenkins-css
           mountPath: /var/jenkins_home/userContent/css
+          readOnly: true
+        - name: logging-properties
+          mountPath: /var/jenkins_home/userContent/logging-conf
           readOnly: true
         - name: {{ template "jenkins.fullname" . }}-home
           mountPath: /var/jenkins_home
@@ -96,3 +99,6 @@ spec:
       - name: jenkins-css
         configMap:
           name: {{ template "jenkins.fullname" . }}-css
+      - name: logging-properties
+        configMap:
+          name: {{ template "jenkins.fullname" . }}-logging-properties

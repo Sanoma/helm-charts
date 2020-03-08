@@ -4,6 +4,13 @@ imagePullPolicy: Always
 javaOpts: ""
 privilegedContainer: false
 
+loggingProperties: |
+  handlers=java.util.logging.ConsoleHandler
+  java.util.logging.ConsoleHandler.formatter=java.util.logging.SimpleFormatter
+  jenkins.level=WARNING
+  java.util.logging.ConsoleHandler.level=WARNING
+
+
 masterTolerations: []
 masterNodeSelector: {}
 podAnnotations: {}
