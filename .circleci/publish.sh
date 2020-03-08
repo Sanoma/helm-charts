@@ -14,7 +14,7 @@ WORKING_DIRECTORY="$PWD"
     echo "ERROR: Could not find Helm charts in $HELM_CHARTS_SOURCE"
     exit 1
 }
-[ -z "$HELM_VERSION" ] && HELM_VERSION=2.8.1
+[ -z "$HELM_VERSION" ] && HELM_VERSION=3.1.1
 [ "$CIRCLE_BRANCH" ] || {
     echo "ERROR: Environment variable CIRCLE_BRANCH is required"
     exit 1
@@ -34,7 +34,7 @@ apk add ca-certificates git openssh
 
 echo '>> Installing Helm...'
 cd /tmp/helm/bin
-wget "https://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}-linux-amd64.tar.gz"
+wget "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 tar -zxf "helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 chmod +x linux-amd64/helm
 alias helm=/tmp/helm/bin/linux-amd64/helm
@@ -49,6 +49,8 @@ git clone -b "$GITHUB_PAGES_BRANCH" "git@github.com:$GITHUB_PAGES_REPO.git" .
 
 echo '>> Building charts...'
 find "$HELM_CHARTS_SOURCE" -mindepth 1 -maxdepth 1 -type d | while read chart; do
+    echo ">>> helm lint $chart"
+    helm dep up "$chart"
     echo ">>> helm lint $chart"
     helm lint "$chart"
     chart_name="`basename "$chart"`"
