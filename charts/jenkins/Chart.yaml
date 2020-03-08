@@ -1,3 +1,4 @@
+apiVersion: v1
 name: jenkins
 version: 1.1.0
 description: Jenkins chart that uses configuration-as-code plugin
