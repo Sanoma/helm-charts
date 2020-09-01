@@ -34,9 +34,11 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
       }
     }
   }
-  // orphanedItemStrategy {
-  //   discardOldItems {}
-  // }
+  orphanedItemStrategy {
+    discardOldItems {
+      daysToKeep(14)
+    }
+  }
   configure {
     def traits = it / sources / data / 'jenkins.branch.BranchSource' / source / traits
     traits << 'com.cloudbees.jenkins.plugins.bitbucket.BranchDiscoveryTrait' {
@@ -45,8 +47,8 @@ multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
   }
   configure {
     it / triggers / 'com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger' {
-      spec('* * * * *')
-      interval('60000')
+      spec('*/5 * * * *')
+      interval('300000')
     }
   }
 }
