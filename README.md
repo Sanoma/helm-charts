@@ -1,6 +1,6 @@
 # sanoma/helm-charts
 
-[![CircleCI](https://circleci.com/gh/sanoma/helm-charts.svg?style=svg)](https://circleci.com/gh/sanoma/helm-charts)
+![Release Status Badge](https://github.com/Sanoma/helm-charts/workflows/Release%20Charts/badge.svg)
 
 This is a collection of open-source Helm charts used internally at Sanoma, available publicly at https://sanoma.github.io/helm-charts
 
