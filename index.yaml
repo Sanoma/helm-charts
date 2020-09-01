@@ -69,6 +69,25 @@ entries:
     version: 0.0.1
   jenkins:
   - apiVersion: v1
+    created: "2020-09-01T13:39:43.541237923Z"
+    description: Jenkins chart that uses configuration-as-code plugin
+    digest: 39328876ff428cbcf4af76b284bc2f974726acf6cc8657cba0dde6198c974a73
+    keywords:
+    - continuous-delivery
+    - continuous-deployment
+    - continuous-integration
+    - jenkins
+    - configuration-as-code
+    - casc
+    - jcasc
+    maintainers:
+    - email: ilya.sotkov@sanoma.com
+      name: Ilya Sotkov
+    name: jenkins
+    urls:
+    - https://github.com/Sanoma/helm-charts/releases/download/jenkins-1.2.1/jenkins-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v1
     created: "2020-03-08T17:05:05.547089659Z"
     description: Jenkins chart that uses configuration-as-code plugin
     digest: 9ab09220b84c9c4a4ad327321204bdf5835479286310bd1c02ac99cd82974225
