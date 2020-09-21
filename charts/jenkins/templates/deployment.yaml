@@ -63,6 +63,9 @@ spec:
         - name: jenkins-css
           mountPath: /var/jenkins_home/userContent/css
           readOnly: true
+        - name: jenkins-userdata
+          mountPath: /var/jenkins_home/userContent/userdata
+          readOnly: true
         - name: logging-properties
           mountPath: /var/jenkins_home/userContent/logging-conf
           readOnly: true
@@ -103,6 +106,9 @@ spec:
       - name: jenkins-css
         configMap:
           name: {{ template "jenkins.fullname" . }}-css
+      - name: jenkins-userdata
+        configMap:
+          name: {{ template "jenkins.fullname" . }}-userdata
       - name: logging-properties
         configMap:
           name: {{ template "jenkins.fullname" . }}-logging-properties

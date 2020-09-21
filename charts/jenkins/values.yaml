@@ -46,6 +46,16 @@ persistence:
 headerColor: red # grey | blue
 headerMessage: "" # E.g. "Jenkins for MyCorp"
 
+userData:
+  create: false
+  # configMap:
+  #   custom-js.js: |
+  #     console.log("Hello from Jenkins")
+  #   custom-stylesheet.css: |
+  #     body {
+  #       background-color: #fff;
+  #     }
+
 # Only for Bitbucket Server
 # Converted to a jobDSL script by the chart then used by jcasc plugin
 jobGenerator: []
