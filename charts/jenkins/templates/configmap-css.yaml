@@ -6,7 +6,7 @@ metadata:
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    namspace: {{ .Release.Namespace }}
+    namespace: {{ .Release.Namespace }}
 data:
   extra.css: |
     @import url('https://fonts.googleapis.com/css?family=Cousine');

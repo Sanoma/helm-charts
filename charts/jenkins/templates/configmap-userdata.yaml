@@ -1,12 +1,13 @@
+{{- if .Values.userData.create -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "jenkins.fullname" . }}-logging-properties
+  name: {{ template "jenkins.fullname" . }}-userdata
   labels:
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
     namespace: {{ .Release.Namespace }}
 data:
-  logging.properties: |
-{{ toYaml .Values.loggingProperties | indent 4 }}
+{{ toYaml .Values.userData.configMap | indent 2 }}
+{{- end -}}

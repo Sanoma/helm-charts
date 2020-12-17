@@ -1,54 +1,54 @@
-multibranchPipelineJob(jobProperties.bitbucketRepo.repository) {
-  displayName(jobProperties.bitbucketRepo.repoOwner + "/" + jobProperties.bitbucketRepo.repository)
-  branchSources {
-    branchSource {
-      source {
-        bitbucket {
-          id (jobProperties.bitbucketRepo.repository)
-          serverUrl(jobProperties.bitbucketRepo.serverUrl)
-          repoOwner(jobProperties.bitbucketRepo.repoOwner)
-          repository(jobProperties.bitbucketRepo.repository)
-          credentialsId(jobProperties.bitbucketRepo.credentialsId)
-          traits {
-            localBranchTrait()
-            sshCheckoutTrait {
-              credentialsId(jobProperties.gitRepo.credentialsId)
+for (suffix in jobProperties.jobNameSuffixes) {
+  multibranchPipelineJob(jobProperties.githubRepo.repository + suffix) {
+    displayName(jobProperties.githubRepo.repoOwner + '/' + jobProperties.githubRepo.repository + suffix)
+    branchSources {
+      branchSource {
+        if (jobProperties.isTrunkBranch) {
+          strategy {
+            allBranchesSame {
+              props {
+                suppressAutomaticTriggering()
+              }
             }
-            headWildcardFilter {
-              includes(jobProperties.branchDiscoveryIncludes)
-              excludes(jobProperties.branchDiscoveryExcludes)
+          }
+        }
+        buildStrategies {
+          buildNamedBranches {
+            filters {
+              regex {
+                regex(jobProperties.headRegexFilter)
+                caseSensitive(true)
+              }
+            }
+          }
+        }
+        source {
+          github {
+            id(jobProperties.githubRepo.repository)
+            repoOwner(jobProperties.githubRepo.repoOwner)
+            repository(jobProperties.githubRepo.repository)
+            repositoryUrl(jobProperties.githubRepo.repositoryUrl)
+            configuredByUrl(true)
+            credentialsId(jobProperties.githubRepo.githubAppCredentialsId)
+            traits {
+              localBranchTrait()
+              disableStatusUpdateTrait()
+              headRegexFilter { regex(jobProperties.headRegexFilter) }
+              gitHubBranchDiscovery { strategyId(3) }
+              if (jobProperties.isTrunkBranch) {
+                pruneStaleBranchTrait()
+              }
             }
           }
         }
       }
-      buildStrategies {
-        buildNamedBranches {
-          filters {
-            wildcards {
-              caseSensitive(true)
-              includes(jobProperties.branchPushTriggerIncludes)
-              excludes(jobProperties.branchPushTriggerExcludes)
-            }
-          }
+    }
+    if (jobProperties.isTrunkBranch) {
+      orphanedItemStrategy {
+        discardOldItems {
+          daysToKeep(14)
         }
       }
-    }
-  }
-  orphanedItemStrategy {
-    discardOldItems {
-      daysToKeep(14)
-    }
-  }
-  configure {
-    def traits = it / sources / data / 'jenkins.branch.BranchSource' / source / traits
-    traits << 'com.cloudbees.jenkins.plugins.bitbucket.BranchDiscoveryTrait' {
-      strategyId(3)
-    }
-  }
-  configure {
-    it / triggers / 'com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger' {
-      spec('*/5 * * * *')
-      interval('300000')
     }
   }
 }

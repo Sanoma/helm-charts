@@ -6,7 +6,7 @@ metadata:
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    namspace: {{ .Release.Namespace }}
+    namespace: {{ .Release.Namespace }}
 data:
   jenkins.yaml: |
 {{ toYaml .Values.configuration | indent 4 }}
@@ -14,6 +14,7 @@ data:
     jobs:
 {{ range .Values.jobGenerator }}
     - script: |
-        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson .properties }}')
+        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson . }}')
+
 {{ $.Files.Get "jobdsl/job.groovy" | indent 8 }}
 {{ end }}

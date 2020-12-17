@@ -46,22 +46,27 @@ persistence:
 headerColor: red # grey | blue
 headerMessage: "" # E.g. "Jenkins for MyCorp"
 
-# Only for Bitbucket Server
+userData:
+  create: false
+  # configMap:
+  #   custom-js.js: |
+  #     console.log("Hello from Jenkins")
+  #   custom-stylesheet.css: |
+  #     body {
+  #       background-color: #fff;
+  #     }
+
+# Only valid for integration with GitHub
 # Converted to a jobDSL script by the chart then used by jcasc plugin
-jobGenerator: []
-# - properties:
-#     branchDiscoveryExcludes: ""
-#     branchDiscoveryIncludes: ""
-#     branchPushTriggerIncludes: ""
-#     branchPushTriggerExcludes: ""
-#     bitbucketRepo:
-#       serverUrl: ""
-#       repoOwner: ""
-#       repository: ""
-#       credentialsId: ""
-#     gitRepo:
-#       url: ""
-#       credentialsId: ""
+# jobGenerator:
+# - jobNameSuffixes: [""]
+#   isTrunkBranch: false
+#   headRegexFilter: "$feature/.*"
+#   githubRepo:
+#     serverUrl: ""
+#     repoOwner: ""
+#     repository: ""
+#     credentialsId: ""
 
 # Used by "configuration-as-code" plugin
 configuration:
