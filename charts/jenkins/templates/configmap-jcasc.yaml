@@ -14,6 +14,7 @@ data:
     jobs:
 {{ range .Values.jobGenerator }}
     - script: |
-        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson .properties }}')
+        def jobProperties = new groovy.json.JsonSlurper().parseText('{{ toJson . }}')
+
 {{ $.Files.Get "jobdsl/job.groovy" | indent 8 }}
 {{ end }}

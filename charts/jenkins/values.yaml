@@ -56,22 +56,17 @@ userData:
   #       background-color: #fff;
   #     }
 
-# Only for Bitbucket Server
+# Only valid for integration with GitHub
 # Converted to a jobDSL script by the chart then used by jcasc plugin
-jobGenerator: []
-# - properties:
-#     branchDiscoveryExcludes: ""
-#     branchDiscoveryIncludes: ""
-#     branchPushTriggerIncludes: ""
-#     branchPushTriggerExcludes: ""
-#     bitbucketRepo:
-#       serverUrl: ""
-#       repoOwner: ""
-#       repository: ""
-#       credentialsId: ""
-#     gitRepo:
-#       url: ""
-#       credentialsId: ""
+# jobGenerator:
+# - jobNameSuffixes: [""]
+#   isTrunkBranch: false
+#   headRegexFilter: "$feature/.*"
+#   githubRepo:
+#     serverUrl: ""
+#     repoOwner: ""
+#     repository: ""
+#     credentialsId: ""
 
 # Used by "configuration-as-code" plugin
 configuration:
